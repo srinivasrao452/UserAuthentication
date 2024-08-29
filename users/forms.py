@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 ## This is a comment line from server side added
+## This is another line from local side
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField()
