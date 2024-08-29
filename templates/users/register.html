@@ -1,0 +1,29 @@
+
+
+{% extends 'users/base.html' %}
+
+{% block title %}
+	Register Page
+{% endblock %}
+
+{% block body %}
+	{% if form %}
+       <form method="POST" id="id_register">
+          {% csrf_token %}
+          <table>
+              {{ form }}
+              <tr>
+                  <th></th>
+                  <td><input type="submit" value="Register" class="btn btn-success ms-5"></td>
+              </tr>
+          </table>
+       </form>
+
+    {% elif message %}
+        <h1>{{ message }}</h1>
+
+    {% elif error %}
+        <h1>{{ error }}</h1>
+
+    {% endif %}
+{% endblock %}

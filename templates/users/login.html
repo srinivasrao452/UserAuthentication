@@ -1,0 +1,22 @@
+
+{% extends 'users/base.html' %}
+
+{% block title %}
+	Login Page
+{% endblock %}
+
+{% block body %}
+	{% if form %}
+       <form method="POST" id="id_login">
+          {% csrf_token %}
+          <table>
+              {{ form }}
+              <tr>
+                  <th></th>
+                  <td><input type="submit" value="Login" class="btn btn-success ms-5"></td>
+              </tr>
+          </table>
+       </form>
+
+    {% endif %}
+{% endblock %}
